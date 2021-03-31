@@ -8,7 +8,18 @@ const App = () => {
   function randomNumber(limit) {
     return Math.round(Math.random() * limit);
   }
-  
+  function checkAnswer() {
+    const c = a + b;
+    if (c == answer) {
+      setA(randomNumber(50));
+      setB(randomNumber(50));
+      setAnswer("?");
+      setCountdown(20);
+    }
+    else {
+      alert("No");
+    }
+  }
   return (
     <div className="App">
       
